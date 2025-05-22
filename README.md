@@ -1,1 +1,1 @@
-# Linux-study
+Linux fundaments practice labs
