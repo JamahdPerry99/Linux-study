@@ -1,0 +1,11 @@
+# add user anna 
+    sudo useradd anna
+# set password for user anna "Password"
+    sudo passwd anna "Password"
+# use vim to create a file with the name and make sure it contains the names alex, alexander, linda, and belinda on sperate lines
+    vim users
+     alex
+      alexander
+      linda
+      belinda
+      :wq!(this saves and closes the file)
