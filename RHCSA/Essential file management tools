@@ -1,0 +1,59 @@
+"ls" list files
+"mkdir" make a directory 
+"cp" copy files
+"mv" move files
+"rmdir" remove directories
+"rm" remove files
+
+When copying files you will do "cp (name of file) (name of directory)
+
+
+# finding files
+
+"find / -name "hosts" this is finding the exactfile with the name host
+"find / -type f -size +100M" this is finding file sizes over 100M
+"find /etc -exec grep -l student {} \; -exec cp {} find/contens/\; 2>/dev/null"
+"find /etc/-name '*' -type f | xargs grep "127.0.0.1" takes the output of the first command and uses it in the second one
+
+
+
+# mounting filesystems
+
+
+#understanding Links hard and soft links
+
+"ln is used to create hard links
+"ln -s" is sued to create soft links
+example "ln -s file_a file_b" this is creating a soft link file b pointing to file a
+example "ln file_a file_c" this is creating a hard link file c pointing to file a
+
+
+# archiving files.
+
+"tar" is used to compress, extract, or list
+
+"tar -cvf my_archive.tar /home/etc" this archives the /home and /etc directory and saves the file name as my_archive.tar
+"tar -tvf" will show contents of an archive
+:tar -xvf my_archive" extracts to current directory
+
+This example command is "tar -cvf /tmp/archive.tar /home /etc" This is copying the /etc and /home file and saving it into the /tmp file as archive.tar.
+
+
+gzip uses "-z" 
+bzip2 uses "-j"
+
+
+
+
+# Lab
+
+1. Use tar to create a compressed archive of all files in the /etc and /opt directories. Write this archive to your home directory
+tar czvf lab6.tgz /etc /opt
+Verify using "tar tvf lab6.tgz"
+
+2. Create a symbolic link to the archive you've just created in the /tmp directory
+
+ls -s lab6.tgz /tmp/lab6.link
+
+3. Remove the archive from your home directory. What happens to the symbolic link?
+
