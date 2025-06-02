@@ -1,0 +1,41 @@
+# exploring common tools
+"Head" is used to show first 10 lines
+
+"Tail is used to show last 10 lines
+
+example "head /etc/passwd"
+
+
+"cat" dumps text file contents on screen
+"tac" dumps text file contents on screen
+
+# Using grep
+"grep" is good to find text in files or in output
+"ps aux | grep ssh" this is searching the text file for anything that contains ssh.
+"grep student * 2>/dev/null" we are looking into a directory and searching for files that contains student
+
+
+# applying regualr expressions
+
+
+
+# exploring awk
+
+
+
+#Lab 
+
+1. Use the head and tail to display the fifth line of the file /etc/passwd
+"head -5 /etc/passwd"
+"tail -5 /etc/passwd"
+2. Use sed to display the fifth line of the file /etc/passwd(-n5p)
+
+3. Use awk in a pipe to filter the last column out of the results of the command ps aux '{print $NF}'
+
+4. use grep to show the names of all the files in /etc that have lines that contain the text 'root' as a word
+grep 'root' * 2>/dev/null
+
+5. Use grep to show all lines from all the files in /etc that contain exactly 3 characters
+grep '^...$' * 2>/dev/null
+6. Use grep to find all files that contain the string "alex", but make sure that "alexander" is not included in the result
+grep 'alex *
