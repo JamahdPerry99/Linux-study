@@ -1,1 +1,20 @@
 
+User properties are located in the /etc/passwd
+
+
+Name: the name of the account
+Password: secret that is used to authenticate,
+UID: a unique identifier for users
+GID: the ID of the primary group
+Home directory: environment where users create personal files
+Shell: the program that will be started after successful authentication.
+
+
+"useradd" creates user account
+"usermod" modify user accounts
+"userdel" delete user accounts
+"passwd" set passwords
+
+"useradd lori -u 2000" add new user and sets her UID to a unique number
+
+"userdel -rf (username)" this is forcing the removal of user
